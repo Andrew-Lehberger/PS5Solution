@@ -33,10 +33,18 @@ public class Catalog {
 		this.books = books;
 	}
 	
-	public Book GetBook(String BookID)
+	public Book GetBook(String BookID) throws Exception
 	{
 		Book b = null;
+		for (Book bk : this.books)
+		{
+			if (bk.getId() != b.getId())
+			{
+				throw new Exception("book not found");
+			}
 		
+	
+			}
 		return b;
 	}
 	
